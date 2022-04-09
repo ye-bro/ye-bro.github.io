@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<title>新建标签页</title>
+		<style>html,body{height:100%;width:100%;overflow:hidden;margin:0;padding:0;background-color:#202020}</style>
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<input type="text" id="inp" onkeyup="change()" style="position:fixed;z-index:9999;top:1rem;left:1rem;width:5rem;">
+		<iframe src="" frameborder="0" style="height:100%;width:100%;" id="ifr"></iframe>
+		<script>
+			function change(){
+				$("#ifr").attr("src",$("#inp").val());
+			}
+		</script>
+	</body>
+</html>
