@@ -5,6 +5,7 @@
 /* 仅仅针对于这个网站 */
 html,body{
 	height:100%;
+	background-color:#202020;
 }
 code{
 	background-color:#202020!important;
@@ -27,14 +28,14 @@ p>code{
 	-moz-user-select:text!important;
 	-khtml-user-select:text!important;
 	user-select:text!important;
-	font-family:Consolas,等线,sans-serif;
+	font-family:等线,Consolas,"Fira Code",sans-serif;
 }
 h1,h2,h3,h4,h5,h6,h1 *,h2 *,h3 *,h4 *,h5 *,h6 *,.navbar-brand{
-	font-family:等线,sans-serif;
+	font-family:Consolas,"Fira Code",等线,sans-serif;
 }
 .text-light>h1,.text-light>h2,.text-light>h3,.text-light>h4,.text-light>h5,.text-light>h6,.text-light>h1 *,.text-light>h2 *,.text-light>h3 *,.text-light>h4 *,.text-light>h5 *,.text-light>h6 *,.text-light>.navbar-brand{
 	color:#f1f1f1;
-	font-family:等线,sans-serif;
+	font-family:Consolas,"Fira Code",等线,sans-serif;
 }
 .my-btn-1{
 	position:fixed!important;
