@@ -33,6 +33,7 @@ p>code{
 *{
 	font-family:等线,Consolas,"Fira Code",sans-serif;
 	-webkit-text-size-adjust:none!important;
+	border:none!important;
 }
 h1,h2,h3,h4,h5,h6,h1 *,h2 *,h3 *,h4 *,h5 *,h6 *,.navbar-brand{
 	font-family:Consolas,"Fira Code",等线,sans-serif;
