@@ -12,7 +12,8 @@
     <p><a href="./blog/不让micro编辑器生产log.txt.html">阅读全文&gt;</a></p>
     <hr>
     <!-- ---------- -->
-
+</div>
+<div class="onePage">
     <!-- ---------- -->
     <h3><a href="./blog/好看的Matrix字符雨动态桌面和透明任务栏.html" class="a-h">好看的Matrix字符雨动态桌面和透明任务栏</a></h3>
     <p><i class="fa fa-clock-o"></i> 发布于 2022年4月10日</code></p>
@@ -20,18 +21,17 @@
     <p><a href="./blog/好看的Matrix字符雨动态桌面和透明任务栏.html">阅读全文&gt;</a></p>
     <hr>
     <!-- ---------- -->
-
+</div>
+<div class="onePage">
     <!-- ---------- -->
     <h3><a href="./blog/关于网站更新的事情.html" class="a-h">关于网站更新的事情</a></h3>
     <p><i class="fa fa-clock-o"></i> 发布于 2022年4月10日</code></p>
     <p><code>摘要</code>前段时间,网站关闭,因为我要进行更新。2022年4月9日网站又开了</p>
     <p><a href="./blog/关于网站更新的事情.html">阅读全文&gt;</a></p>
     <hr>
-    
     <!-- ---------- -->
 </div>
 <div class="onePage">
-
     <!-- ---------- -->
     <h3><a href="./blog/Hello,World.html" class="a-h">Hello,World!</a></h3>
     <p><i class="fa fa-clock-o"></i> 发布于 2022年4月9日</code></p>
@@ -41,4 +41,4 @@
     <!-- ---------- -->
 </div>
 
-<div class="text-center"><p>第<span id="nowPage"></span>页 共<span id="allPage"></span>页</p></div><div class="text-center"><button class="btn btn-light" onclick="prev()"><i class="fa fa-angle-left"></i></button> <button class="btn btn-light" onclick="next()"><i class="fa fa-angle-right"></i></button></div></div></div></div><div class="my-btn-2"><button class="rounded-pill btn btn-light" onclick="setTimeout(window.location.href='./index.html',500);"><i class="fa fa-bars"></i></button></div><div class="my-btn-1"><button class="rounded-pill btn btn-light" onclick="setTimeout(window.location.href='https://github.com/ye-bro',500);"><i class="fa fa-github"></i></button></div><div class="text-center bg-mydark text-light p-5">&copy;<span id="year"></span> 叶以承</div><script>var a=document.getElementsByClassName("onePage");for(var i=0;i<a.length;i++){a[i].style.display="none";}function get(x){let query=window.location.search.substring(1);let vars=query.split("&");for(let i=0;i<vars.length;i++){let pair=vars[i].split("=");if(pair[0]==x){return pair[1];}}return false;}function prev(){if(get("page")==1||get("page")==false){alert("已经是第1页")}else{setTimeout(()=>window.location.href=('?page='+(parseInt(get("page"))-1)),300);}}function next(){if((get("page")==false&&a.length<=1)||get("page")>=a.length){alert("已经是最后一页")}else if(get("page")==false){setTimeout(()=>window.location.href='?page=2',300);}else{setTimeout(()=>window.location.href=('?page='+(parseInt(get("page"))+1)),300);}}if(get("page")==false){a[0].style.display="block";$("#nowPage").html(1);$("#allPage").html(a.length);}else{a[get("page")-1].style.display="block";$("#nowPage").html(get("page"));$("#allPage").html(a.length);}$("#year").html(new Date().getFullYear());var p=navigator.platform;var win=p.indexOf("Win")==0;var mac=p.indexOf("Mac")==0;var x11=(p=="X11")||(p.indexOf("Linux")==0);if(!(win||mac||xll)){$("html").css("font-size","larger");}</script></body></html>
+<div class="text-center"><p>第<span id="nowPage"></span>页 共<span id="allPage"></span>页</p></div><div class="text-center"><button class="btn btn-light" onclick="prev()"><i class="fa fa-angle-left"></i></button> <button class="btn btn-light" onclick="next()"><i class="fa fa-angle-right"></i></button></div></div></div></div><div class="my-btn-2"><button class="rounded-pill btn btn-light" onclick="setTimeout(window.location.href='./index.html',500);"><i class="fa fa-bars"></i></button></div><div class="my-btn-1"><button class="rounded-pill btn btn-light" onclick="setTimeout(window.location.href='https://github.com/ye-bro',500);"><i class="fa fa-github"></i></button></div><div class="text-center bg-mydark text-light p-5">&copy;<span id="year"></span> 叶以承</div><script>var a = document.getElementsByClassName("onePage");for (var i = 0; i < a.length; i++) {a[i].style.display = "none";}function get(x) {let query = window.location.search.substring(1);let vars = query.split("&");for (let i = 0; i < vars.length; i++) {let pair = vars[i].split("=");if (pair[0] == x) {return pair[1];}}return false;}function prev() {if (get("page") == 1 || get("page") == false) {alert("已经是第1页")} else {setTimeout(() => window.location.href = ('?page=' + (parseInt(get("page")) - 1)), 300);}}function next() {if ((get("page") == false && a.length <= 1) || get("page") >= a.length) {alert("已经是最后一页")} else if (get("page") == false) {setTimeout(() => window.location.href = '?page=2', 300);} else {setTimeout(() => window.location.href = ('?page=' + (parseInt(get("page")) + 1)), 300);}}if (get("page") == false) {a[0].style.display = "block";a[1].style.display = "block";a[2].style.display = "block";$("#nowPage").html(1);$("#allPage").html(Math.ceil(a.length/3));} else {a[(get("page")-1)*3].style.display = "block";a[(get("page")-1)*3+1].style.display = "block";a[(get("page")-1)*3+2].style.display = "block";$("#nowPage").html(get("page"));$("#allPage").html(Math.ceil(a.length/3));}$("#year").html(new Date().getFullYear());var p = navigator.platform;var win = p.indexOf("Win") == 0;var mac = p.indexOf("Mac") == 0;var x11 = (p == "X11") || (p.indexOf("Linux") == 0);if (!(win || mac || xll)) {$("html").css("font-size", "larger");}</script></body></html>
