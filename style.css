@@ -90,7 +90,7 @@ h1,h2,h3,h4,h5,h6,h1 *,h2 *,h3 *,h4 *,h5 *,h6 *,.navbar-brand{
 	top:0;
 }
 hr{
-	border-bottom:.1rem solid #f1f1f1!important;
+	border-bottom:.05rem solid #f1f1f1!important;
 }
 .kai{
 	font-family:KaiTi,FangSong,STKaiti,STFangsong,Consolas,sans-serif!important;
@@ -100,3 +100,4 @@ hr{
 	-moz-user-select:none!important;
 	-webkit-user-select:none!important;
 }
+@media screen and (max-width:768px){html{font-size:2.5vw;}}
