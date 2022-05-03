@@ -71,7 +71,7 @@ function next() {
         setTimeout(() => window.location.href = ('?page=' + (parseInt(get("page")) + 1)), 300);
     }
 }
-if(get("page")>Math.ceil(a.length / 3)){
+if(get("page")>Math.ceil(a.length / 3)||get("page")<0||!/^\d+$/.test(get("page"))){
     alert("此页不存在,将跳转到第一页");
     window.location.href="?page=1";
 }
