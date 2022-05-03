@@ -6,6 +6,15 @@
 html,body{
 	background-color:#202020;
 }
+*::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+*::-webkit-scrollbar {
+    width: 5px;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #888888;
+}
 :not(.text-light) code{
 	background-color:#202020!important;
 	color:#f1f1f1!important;
