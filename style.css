@@ -39,15 +39,15 @@ p>code{
 	color:#202020!important;
 }
 *{
-	font-family:等线,Consolas,'Courier New',Courier,"Fira Code",sans-serif;
+	font-family:Consolas,'Courier New',Courier,"Fira Code",等线,sans-serif;
 	border:none!important;
 }
 h1,h2,h3,h4,h5,h6,h1 *,h2 *,h3 *,h4 *,h5 *,h6 *,.navbar-brand{
-	font-family:Consolas,'Courier New',Courier,"Fira Code",sans-serif;
+	font-family:Consolas,'Courier New',Courier,"Fira Code",等线,sans-serif!important;
 }
 .text-light>h1,.text-light>h2,.text-light>h3,.text-light>h4,.text-light>h5,.text-light>h6,.text-light>h1 *,.text-light>h2 *,.text-light>h3 *,.text-light>h4 *,.text-light>h5 *,.text-light>h6 *,.text-light>.navbar-brand{
 	color:#f1f1f1;
-	font-family:Consolas,'Courier New',Courier,"Fira Code",sans-serif;
+	font-family:Consolas,'Courier New',Courier,"Fira Code",等线,sans-serif!important;
 }
 .my-btn-1{
 	position:fixed!important;
@@ -92,5 +92,5 @@ hr{
 	border-bottom:.1rem solid #f1f1f1!important;
 }
 .kai{
-	font-family:KaiTi,STKaiti,FangSong,STFangsong,Consolas,sans-serif!important;
+	font-family:KaiTi,FangSong,STKaiti,STFangsong,Consolas,sans-serif!important;
 }
