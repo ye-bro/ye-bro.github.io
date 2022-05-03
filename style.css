@@ -10,7 +10,8 @@ html,body{
     background-color: #f1f1f1;
 }
 *::-webkit-scrollbar {
-    width: 5px;
+    width: .3rem;
+	height: .3rem;
 }
 *::-webkit-scrollbar-thumb {
     background-color: #888888;
@@ -93,4 +94,9 @@ hr{
 }
 .kai{
 	font-family:KaiTi,FangSong,STKaiti,STFangsong,Consolas,sans-serif!important;
+}
+.navbar img{
+	user-select:none!important;
+	-moz-user-select:none!important;
+	-webkit-user-select:none!important;
 }
