@@ -78,6 +78,10 @@ h1,h2,h3,h4,h5,h6,h1 *,h2 *,h3 *,h4 *,h5 *,h6 *,.navbar-brand{
 .my-btn-1,.my-btn-2,.my-btn-3,.my-btn-4,.my-btn-5{
 	z-index:9999;
 }
+button.rounded-pill{
+	padding-top:.1rem;
+	padding-bottom:.1rem;
+}
 .fixed{
 	position:fixed;
 }
@@ -96,4 +100,4 @@ hr{
 	-moz-user-select:none!important;
 	-webkit-user-select:none!important;
 }
-@media screen and (max-width:1000px){html{font-size:2.5vw;}}
+@media screen and (max-width:1000px){html{font-size:2vw;}}
