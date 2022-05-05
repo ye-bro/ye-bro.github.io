@@ -96,4 +96,4 @@ hr{
 	-moz-user-select:none!important;
 	-webkit-user-select:none!important;
 }
-@media screen and (max-width:768px){html{font-size:2.5vw;}}
+@media screen and (max-width:1000px){html{font-size:2.5vw;}}
