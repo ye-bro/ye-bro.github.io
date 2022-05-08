@@ -1,85 +1,140 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" x="IE=edge"><meta name="viewport" x="width=device-width, initial-scale=1.0"><link rel="shortcut icon" href="./favicon.png"><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css"><link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"><link rel="stylesheet" href="./animations.css"><link rel="stylesheet" href="./style.css"><script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script><script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script><script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script></script><title>文章编辑器 - 叶bro's Blog</title></head><body><div class="px-9 navbar w-100 bg-white shadow-sm" role="navigation"><img src="./icon.svg" class="hidden-md" style="height:3rem;"><a href="./index.html" class="a-inherit hidden-md">首页</a><a href="./LICENSE" class="a-inherit hidden-md">许可</a><a href="./about.html" class="a-inherit hidden-md">关于</a><span class="hidden-md small"><a href="https://github.com/ye-bro/ye-bro.github.io" class="a-inherit"><i class="fa fa-github"></i> ye-bro/ye-bro.github.io</a></span><div class="container-fluid hidden-lg"><img src="./icon.svg" style="height:3rem;"><div class="navbar-header"><button class="btn btn-light" data-toggle="collapse" data-target="#navbar"><i class="fa fa-bars"></i></button></div><div class="collapse navbar-collapse" id="navbar"><ul class="nav navbar-nav"><a href="./index.html" class="a-inherit">首页</a><a href="./LICENSE" class="a-inherit">许可</a><a href="./about.html" class="a-inherit">关于</a></ul></div></div></div><script src="./fileSaver.js"></script><script src="https://cdn.bootcdn.net/ajax/libs/showdown/2.0.3/showdown.min.js"></script><script src="./template.js"></script><style>html,body{overflow:hidden;}</style><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]}};</script><style>::-webkit-scrollbar{display:none;}</style>
-		<div class="fh px-8 pt-6 main bg-white">
-			<div class="row row-cols-2" id="webs" style="height:100%">
-				<div class="col col-4">
-					<h2>markdown</h2>
-					<textarea class="btn btn-mydark text-left w-100" placeholder="在此输入markdown" id="input" onkeyup="convert()" style="height:30rem;resize:none;word-wrap:normal!important;overflow:scroll;font-family:Consolas
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" x="IE=edge">
+	<meta name="viewport" x="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="./favicon.png">
+	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./animations.css">
+	<link rel="stylesheet" href="./style.css">
+	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	</script>
+	<title>文章编辑器 - 叶bro's Blog</title>
+</head>
+
+<body>
+	<div class="px-9 navbar w-100 bg-white shadow-sm" role="navigation"><img src="./icon.svg" class="hidden-md"
+			style="height:3rem;"><a href="./index.html" class="a-inherit hidden-md">首页</a><a href="./LICENSE"
+			class="a-inherit hidden-md">许可</a><a href="./about.html" class="a-inherit hidden-md">关于</a><span
+			class="hidden-md small"><a href="https://github.com/ye-bro/ye-bro.github.io" class="a-inherit"><i
+					class="fa fa-github"></i> ye-bro/ye-bro.github.io</a></span>
+		<div class="container-fluid hidden-lg"><img src="./icon.svg" style="height:3rem;">
+			<div class="navbar-header"><button class="btn btn-light" data-toggle="collapse" data-target="#navbar"><i
+						class="fa fa-bars"></i></button></div>
+			<div class="collapse navbar-collapse" id="navbar">
+				<ul class="nav navbar-nav"><a href="./index.html" class="a-inherit">首页</a><a href="./LICENSE"
+						class="a-inherit">许可</a><a href="./about.html" class="a-inherit">关于</a></ul>
+			</div>
+		</div>
+	</div>
+	<script src="./fileSaver.js"></script>
+	<script src="https://cdn.bootcdn.net/ajax/libs/showdown/2.0.3/showdown.min.js"></script>
+	<script src="./template.js"></script>
+	<style>
+		html,
+		body {
+			overflow: hidden;
+		}
+	</style>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+	<script>MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };</script>
+	<style>
+		::-webkit-scrollbar {
+			display: none;
+		}
+	</style>
+	<div class="fh px-8 pt-6 main bg-white">
+		<div class="row row-cols-2" id="webs" style="height:100%">
+			<div class="col col-4">
+				<h2>markdown</h2>
+				<textarea class="btn btn-mydark text-left w-100" placeholder="在此输入markdown" id="input"
+					onkeyup="convert()" style="height:30rem;resize:none;word-wrap:normal!important;overflow:scroll;font-family:Consolas
 					"></textarea>
-				</div>
-				<div class="col col-4">
-					<h2>html</h2>
-					<pre class="btn btn-mydark text-left w-100" id="outputCode" style="height:30rem;overflow-y:scroll">
+			</div>
+			<div class="col col-4">
+				<h2>html</h2>
+				<pre class="btn btn-mydark text-left w-100" id="outputCode" style="height:30rem;overflow-y:scroll">
 					</pre>
-					<a href="javascript:copyHandle(document.getElementById('outputCode').innerText)" style="font-size:1rem">复制</a> <a href="javascript:name()" style="font-size:1rem">保存</a>
-				</div>
-				<div class="col col-4">
-					<h2>预览</h2>
-					<div class="btn btn-light text-left w-100" id="output" style="height:30rem;overflow-y:scroll">
-					</div>
+				<a href="javascript:copyHandle(document.getElementById('outputCode').innerText)"
+					style="font-size:1rem">复制</a> <a href="javascript:name()" style="font-size:1rem">保存</a>
+			</div>
+			<div class="col col-4">
+				<h2>预览</h2>
+				<div class="btn btn-light text-left w-100" id="output" style="height:30rem;overflow-y:scroll">
 				</div>
 			</div>
 		</div>
-		<div class="my-btn-4">
-			累了?听点音乐<br>
-			<iframe frameborder=0 src="https://music.163.com/outchain/player?type=2&id=5410030&height=32" style="width:9rem;height:3rem"></iframe>
-			<br>
-			<iframe frameborder=0 src="https://music.163.com/outchain/player?type=2&id=28864043&height=32" style="width:9rem;height:3rem;"></iframe>
-			<br>
-			<iframe frameborder=0 src="https://music.163.com/outchain/player?type=2&id=1711931&height=32" style="width:9rem;height:3rem;"></iframe>
-		</div>
-		<div class="my-btn-1 text-right">注:无法预览mathjax公式<br>&copy; <span id="year"></span> 叶以承</div>
-		<script>
-			$("html").fadeIn(1000);
-			function convert(){
-				var text=document.getElementById("input").value;
-				var converter=new showdown.Converter();
-				var html=converter.makeHtml(text);
-				document.getElementById("outputCode").innerText=html;
-				document.getElementById("output").innerHTML=html;
+	</div>
+	<div class="my-btn-4">
+		累了?听点音乐<br>
+		<iframe frameborder=0 src="https://music.163.com/outchain/player?type=2&id=5410030&height=32"
+			style="width:9rem;height:3rem"></iframe>
+		<br>
+		<iframe frameborder=0 src="https://music.163.com/outchain/player?type=2&id=28864043&height=32"
+			style="width:9rem;height:3rem;"></iframe>
+		<br>
+		<iframe frameborder=0 src="https://music.163.com/outchain/player?type=2&id=1711931&height=32"
+			style="width:9rem;height:3rem;"></iframe>
+	</div>
+	<div class="my-btn-1 text-right">注:无法预览mathjax公式<br>&copy; <span id="year"></span> 叶以承</div>
+	<script>
+		$("html").fadeIn(1000);
+		function convert() {
+			var text = document.getElementById("input").value;
+			var converter = new showdown.Converter();
+			var html = converter.makeHtml(text);
+			document.getElementById("outputCode").innerText = html;
+			document.getElementById("output").innerHTML = html;
+		}
+		function copyHandle(x) {
+			let copy = (e) => {
+				e.preventDefault();
+				e.clipboardData.setData('text/plain', x);
+				alert('复制成功');
+				document.removeEventListener('copy', copy);
 			}
-			function copyHandle(x){
-				let copy=(e)=>{
-					e.preventDefault();
-					e.clipboardData.setData('text/plain',x);
-					alert('复制成功');
-					document.removeEventListener('copy',copy);
-				}
-				document.addEventListener('copy',copy);
-				document.execCommand("Copy");;
+			document.addEventListener('copy', copy);
+			document.execCommand("Copy");;
+		}
+		function check(a) {
+			if (a == "") {
+				alert("文件名不能为空");
+				return false;
 			}
-			function check(a){
-				if(a==""){
-					alert("文件名不能为空");
+			for (var i = 0; i < a.length; i++) {
+				if (
+					a[i] == '/' ||
+					a[i] == '\\' ||
+					a[i] == ':' ||
+					a[i] == '*' ||
+					a[i] == '?' ||
+					a[i] == '"' ||
+					a[i] == '<' ||
+					a[i] == '>' ||
+					a[i] == '|'
+				) {
+					alert('文件名不能含有以下字符:/ \ : * ? " < > |');
 					return false;
 				}
-				for(var i=0;i<a.length;i++){
-					if(
-						a[i]=='/'||
-						a[i]=='\\'||
-						a[i]==':'||
-						a[i]=='*'||
-						a[i]=='?'||
-						a[i]=='"'||
-						a[i]=='<'||
-						a[i]=='>'||
-						a[i]=='|'
-					){
-						alert('文件名不能含有以下字符:/ \ : * ? " < > |');
-						return false;
-					}
-				}
 			}
-			function name(){
-				var name=prompt("另存为");
-				while(check(name)==false){
-					var name=prompt("另存为");
-				}
-				var file=new File([t1+name+t2+document.getElementById('outputCode').innerText+t3],name+".html",{type:"text/plain;charset=utf-8"});
-				saveAs(file);
-				file=new File([t4+name+t5],"new.html",{type:"text/plain;charset=utf-8"});
-				saveAs(file);
+		}
+		function name() {
+			var name = prompt("另存为");
+			while (check(name) == false) {
+				var name = prompt("另存为");
 			}
-			$("#year").html(new Date().getFullYear());var p=navigator.platform;var win=p.indexOf("Win")==0;var mac=p.indexOf("Mac")==0;var x11=(p=="X11")||(p.indexOf("Linux")==0);if(!(win||mac||xll)){$("body").css("font-size","larger");}
-		</script>
-	</body>
+			var file = new File([t1 + name + t2 + document.getElementById('outputCode').innerText + t3], name + ".html", { type: "text/plain;charset=utf-8" });
+			saveAs(file);
+			file = new File([t4 + name + t5], "new.html", { type: "text/plain;charset=utf-8" });
+			saveAs(file);
+		}
+		$("#year").html(new Date().getFullYear()); var p = navigator.platform; var win = p.indexOf("Win") == 0; var mac = p.indexOf("Mac") == 0; var x11 = (p == "X11") || (p.indexOf("Linux") == 0); if (!(win || mac || xll)) { $("body").css("font-size", "larger"); }
+	</script>
+</body>
+
 </html>
