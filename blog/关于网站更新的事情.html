@@ -38,6 +38,7 @@ h1,h2,h3,h4,h5,h6,h1 *,h2 *,h3 *,h4 *,h5 *,h6 *,.navbar-brand{
 }
 </code></pre>
 <p>同时增加了楷体</p>
+<hr>
 <h5>2022年5月9日更新</h4>
 <p>字体更改，字体部分css如下（Astyle格式化了）:</p>
 <pre><code>* {
@@ -78,4 +79,24 @@ h6 *,
 	font-family: Consolas, 'Courier New', Courier, "Fira Code", 等线, sans-serif !important;
 }
 </code></pre>
-<p>同时增加了楷体</p></div></div></div></div><div class="my-btn-2"><button class="rounded-pill btn btn-light" onclick="setTimeout(window.location.href='../index.html',500);"><i class="fa fa-home"></i></button></div><div class="my-btn-1"><button class="rounded-pill btn btn-light" onclick="setTimeout(window.location.href='https://github.com/ye-bro',500);"><i class="fa fa-github"></i></button></div><div class="text-center bg-mydark text-light p-5">&copy;<span id="year"></span> 叶以承</div><script>$("html").fadeIn(1000);$("#year").html(new Date().getFullYear());</script></body></html>
+<hr>
+<h5>2022年5月11日更新</h4>
+<p>代码块样式更改，被选中的文字背景颜色设为半透明，css如下（以后的css都经过Astyle）:</p>
+<pre><code>
+:not(.text-light) pre,
+:not(.text-light) code {
+	background-color: #202020 !important;
+	color: #f1f1f1 !important;
+	border-radius: .5rem !important;
+	padding: .2rem !important;
+}
+
+.text-light pre,
+.text-light code {
+	background-color: #f1f1f1 !important;
+	color: #202020 !important;
+	border-radius: .5rem !important;
+	padding: .2rem !important;
+}
+</code></pre>
+</div></div></div></div><div class="my-btn-2"><button class="rounded-pill btn btn-light" onclick="setTimeout(window.location.href='../index.html',500);"><i class="fa fa-home"></i></button></div><div class="my-btn-1"><button class="rounded-pill btn btn-light" onclick="setTimeout(window.location.href='https://github.com/ye-bro',500);"><i class="fa fa-github"></i></button></div><div class="text-center bg-mydark text-light p-5">&copy;<span id="year"></span> 叶以承</div><script>$("html").fadeIn(1000);$("#year").html(new Date().getFullYear());</script></body></html>
