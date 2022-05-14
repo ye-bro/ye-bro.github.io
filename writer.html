@@ -8,13 +8,20 @@
 	<link rel="shortcut icon" href="./favicon.png">
 	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
 	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-	
+
 	<link rel="stylesheet" href="./style.css">
 	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
 	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	</script>
 	<title>文章编辑器 - 叶bro's Blog</title>
+	<noscript>
+		<style>
+			html {
+				display: block !important
+			}
+		</style>
+	</noscript>
 </head>
 
 <body>
@@ -84,12 +91,13 @@
 	<div class="my-btn-1 text-right">注:无法预览mathjax公式<br>&copy; <span id="year"></span> 叶以承</div>
 	<script>
 		$("html").fadeIn(1000);
+		$("#year").html(new Date().getFullYear());
 		function convert() {
-			var text = document.getElementById("input").value;
+			var text = $("#input").val();
 			var converter = new showdown.Converter();
 			var html = converter.makeHtml(text);
-			document.getElementById("outputCode").innerText = html;
-			document.getElementById("output").innerHTML = html;
+			$("#outputCode").text(html);
+			$("#output").html(html);
 		}
 		function copyHandle(x) {
 			let copy = (e) => {
@@ -128,12 +136,15 @@
 			while (check(name) == false) {
 				var name = prompt("另存为");
 			}
-			var file = new File([t1 + name + t2 + document.getElementById('outputCode').innerText + t3], name + ".html", { type: "text/plain;charset=utf-8" });
-			saveAs(file);
-			file = new File([t4 + name + t5], "new.html", { type: "text/plain;charset=utf-8" });
-			saveAs(file);
+			var d = new Date();
+			var date = d.getFullYear() + "年" + d.getMonth() + 1 + "月" + d.getDate() + "日"
+
+			var main = $("#outputCode").text();
+			var file1 = new File([t1 + name + t2 + name + t3 + date + t4 + main + t5], name + ".html", { type: "text/plain;charset=utf-8" });
+			saveAs(file1);
+			var file2 = new File([$("#input").val()], name + ".md", { type: "text/plain;charset=utf-8" });
+			saveAs(file2);
 		}
-		$("#year").html(new Date().getFullYear()); var p = navigator.platform; var win = p.indexOf("Win") == 0; var mac = p.indexOf("Mac") == 0; var x11 = (p == "X11") || (p.indexOf("Linux") == 0); if (!(win || mac || xll)) { $("body").css("font-size", "larger"); }
 	</script>
 </body>
 
