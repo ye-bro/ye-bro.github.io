@@ -12,11 +12,11 @@ sudo apt install astyle
 
 注意是这个扩展，不要安装别的，接下来配置快捷键（红圈），我比较喜欢```ctrl+shift+i```不过你也可以配置成别的
 
-![](../img/2022/05/002.png)
+<img src="../img/2022/05/002.png" class="lg">
 
 #### 配置Astyle
 
-然后打开```settings.json```，注意是整个的不是工作区的，在后面加上你的配置。我比较喜欢OIer最常用的kr（Kernighan&Ritchie）风格代码，配置如下。你也可以直接复制这个json，如果你要自定义风格，只需注释我的```--style```并且选择你自己的
+然后打开```settings.json```，注意是整个的不是工作区的，在后面加上你的配置。我比较喜欢OIer最常用的java风格代码，配置如下。你也可以直接复制这个json，如果你要自定义风格，只需注释我的```--style```并且选择你自己的
 
 ```json
 "astyle.additional_languages": [
