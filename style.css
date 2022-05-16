@@ -105,7 +105,7 @@
 
 .pr-10,
 .px-10 {
-	padding-right: 20rem !important
+	padding-right: 15rem !important
 }
 
 .pb-10,
@@ -115,7 +115,7 @@
 
 .pl-10,
 .px-10 {
-	padding-left: 20rem !important
+	padding-left: 15rem !important
 }
 
 @media screen and (max-width:1400px) and (min-width:1000px) {
@@ -275,7 +275,7 @@ a,
 li,
 code,
 pre {
-	line-height: 2rem!important;
+	line-height: 2rem !important;
 }
 
 kbd {
@@ -289,14 +289,12 @@ kbd {
 	text-decoration: none
 }
 
-.main a {
-	color: inherit;
-	text-decoration: underline
+.main a:not(.a-h) {
+	color: #0969da;
 }
 
-.main a:hover {
-	color: #c1c1c1;
-	text-decoration: none
+.main a:not(.a-h):hover {
+	color: #000088;
 }
 
 .a-inherit {
@@ -677,37 +675,38 @@ p>code {
 }
 
 * {
-	font-family: mathjax-tex,apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Consolas, 'Courier New', Courier, 'Fira Code', 等线, sans-serif;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    word-wrap: break-word;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-h1 *,
-h2 *,
-h3 *,
-h4 *,
-h5 *,
-h6 *,
+h1:not(i),
+h2:not(i),
+h3:not(i),
+h4:not(i),
+h5:not(i),
+h6:not(i),
+h1 *:not(i),
+h2 *:not(i),
+h3 *:not(i),
+h4 *:not(i),
+h5 *:not(i),
+h6 *:not(i),
 .navbar-brand {
 	font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 }
 
-.text-light>h1,
-.text-light>h2,
-.text-light>h3,
-.text-light>h4,
-.text-light>h5,
-.text-light>h6,
-.text-light>h1 *,
-.text-light>h2 *,
-.text-light>h3 *,
-.text-light>h4 *,
-.text-light>h5 *,
-.text-light>h6 *,
+.text-light>h1>:not(i),
+.text-light>h2>:not(i),
+.text-light>h3>:not(i),
+.text-light>h4>:not(i),
+.text-light>h5>:not(i),
+.text-light>h6>:not(i),
+.text-light>h1 *>:not(i),
+.text-light>h2 *>:not(i),
+.text-light>h3 *>:not(i),
+.text-light>h4 *>:not(i),
+.text-light>h5 *>:not(i),
+.text-light>h6 *>:not(i),
 .text-light>.navbar-brand {
 	color: #f1f1f1;
 	font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
@@ -775,7 +774,7 @@ button.rounded-pill {
 	-webkit-user-select: none !important;
 }
 
-@media screen and (max-width:1000px) and (min-width:768px) {
+@media screen and (max-width:768px) {
 	html {
 		font-size: 2vw;
 	}
@@ -791,4 +790,9 @@ button.rounded-pill {
 
 html {
 	display: none
+}
+
+hr {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 }
