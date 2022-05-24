@@ -8,11 +8,11 @@ sudo apt install astyle
 
 然后安装vscode扩展Astyle
 
-![](../img/2022/05/001.png)
+![](../../../img/2022/05/001.png)
 
 注意是这个扩展，不要安装别的，接下来配置快捷键（红圈），我比较喜欢```ctrl+shift+i```不过你也可以配置成别的
 
-<img src="../img/2022/05/002.png" class="lg">
+<img src="../../../img/2022/05/002.png" class="lg">
 
 #### 配置Astyle
 
@@ -54,7 +54,7 @@ sudo apt install astyle
 
 安装扩展Format files，注意是这个
 
-![](../img/2022/05/003.png)
+![](../../../img/2022/05/003.png)
 
 然后在资源管理器里面右键点击你想格式化的文件夹，选择start format files: this folder，然后选择Do it!
 

@@ -95,27 +95,27 @@
 }
 
 .p-10 {
-	padding: 20rem !important
+	padding: 24rem !important
 }
 
 .pt-10,
 .py-10 {
-	padding-top: 20rem !important
+	padding-top: 24rem !important
 }
 
 .pr-10,
 .px-10 {
-	padding-right: 15rem !important
+	padding-right: 24rem !important
 }
 
 .pb-10,
 .py-10 {
-	padding-bottom: 20rem !important
+	padding-bottom: 24rem !important
 }
 
 .pl-10,
 .px-10 {
-	padding-left: 15rem !important
+	padding-left: 24rem !important
 }
 
 @media screen and (max-width:1400px) and (min-width:1000px) {
@@ -317,10 +317,9 @@ kbd {
 }
 
 pre {
-	font-family: Consolas, monospace;
+	font-family: Consolas, 'Courier New', monospace;
 	line-height: 1rem;
-	background-color: #202020;
-	color: #f1f1f1;
+	background-color: #f1f1f1;
 	padding: 1rem
 }
 
@@ -404,7 +403,7 @@ pre {
 	display: inherit !important
 }
 
-@media screen and (max-width:991px) {
+@media screen and (max-width:992px) {
 	.hidden-md {
 		display: none !important
 	}
@@ -414,7 +413,7 @@ pre {
 	display: none !important
 }
 
-@media screen and (min-width:769px) and (max-width:991px) {
+@media screen and (max-width:991px) {
 	.display-md {
 		display: inherit !important
 	}
@@ -493,6 +492,10 @@ pre {
 .btn-mydark:not(:disabled):not(.disabled):active:focus,
 .show>.btn-mydark.dropdown-toggle:focus {
 	box-shadow: 0 0 0 .2rem rgba(82, 88, 93, .5) !important
+}
+
+.text-light {
+	color: #f1f1f1 !important
 }
 
 .bg-light {
@@ -625,39 +628,29 @@ p>a {
 	font-style: normal;
 }
 
+/* 自动空格 */
+
+html.han-la hanla:after {
+    content: " ";
+    display: inline;
+    font-family: Arial;
+    font-size: 0.89em;
+}
+html.han-la code hanla,
+html.han-la pre hanla,
+html.han-la kbd hanla,
+html.han-la samp hanla {
+    display: none;
+}
+html.han-la ol > hanla,
+html.han-la ul > hanla {
+    display: none;
+}
+
 /* 仅仅针对于这个网站 */
 html,
 body {
 	background-color: #202020;
-}
-
-*::-webkit-scrollbar-track {
-	background-color: #f1f1f1;
-}
-
-*::-webkit-scrollbar {
-	width: .3rem;
-	height: .3rem;
-}
-
-*::-webkit-scrollbar-thumb {
-	background-color: #888888;
-}
-
-:not(.text-light) pre,
-:not(.text-light) code {
-	background-color: #202020 !important;
-	color: #f1f1f1 !important;
-	border-radius: .5rem !important;
-	padding: .2rem !important;
-}
-
-.text-light pre,
-.text-light code {
-	background-color: #f1f1f1 !important;
-	color: #202020 !important;
-	border-radius: .5rem !important;
-	padding: .2rem !important;
 }
 
 p>code {
@@ -675,8 +668,8 @@ p>code {
 }
 
 * {
-	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
-    word-wrap: break-word;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+	word-wrap: break-word;
 }
 
 h1:not(i),
@@ -762,6 +755,7 @@ button.rounded-pill {
 .navbar {
 	position: fixed;
 	top: 0;
+	z-index: 10000;
 }
 
 .kai {
