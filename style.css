@@ -648,43 +648,8 @@ p>code {
 	color: #202020 !important;
 }
 
-* {
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
-	word-wrap: break-word;
-}
 
-h1:not(i),
-h2:not(i),
-h3:not(i),
-h4:not(i),
-h5:not(i),
-h6:not(i),
-h1 *:not(i),
-h2 *:not(i),
-h3 *:not(i),
-h4 *:not(i),
-h5 *:not(i),
-h6 *:not(i),
-.navbar-brand {
-	font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-}
 
-.text-light>h1>:not(i),
-.text-light>h2>:not(i),
-.text-light>h3>:not(i),
-.text-light>h4>:not(i),
-.text-light>h5>:not(i),
-.text-light>h6>:not(i),
-.text-light>h1 *>:not(i),
-.text-light>h2 *>:not(i),
-.text-light>h3 *>:not(i),
-.text-light>h4 *>:not(i),
-.text-light>h5 *>:not(i),
-.text-light>h6 *>:not(i),
-.text-light>.navbar-brand {
-	color: #f1f1f1;
-	font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-}
 
 .my-btn-1 {
 	position: fixed !important;
