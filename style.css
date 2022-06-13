@@ -319,17 +319,24 @@ kbd {
 pre {
 	font-family: Consolas, 'Courier New', monospace;
 	line-height: 1rem;
-	background-color: #f1f1f1;
-	padding: 1rem
+	background-color: #1e1e1e;
+	color:#fff;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-bottom: 1rem;
+	border-radius:.2rem;
+	border: 1rem solid #343a40;
+}
+
+pre::before{
+	display:block;
+	content:"代码";
+	background-color:#343a40;
+	width:min-content;
+	padding:.3rem;
 }
 
 .main img {
-	margin-top: 2rem;
-	margin-bottom: 2rem;
-	width: 60%
-}
-
-.main img.lg {
 	margin-top: 2rem;
 	margin-bottom: 2rem;
 	width: 100%
@@ -495,7 +502,7 @@ pre {
 }
 
 .text-light {
-	color: #f1f1f1 !important
+	color: #f1f1f1 !important;
 }
 
 .bg-light {
@@ -629,27 +636,21 @@ p>a {
 }
 
 /* 仅仅针对于这个网站 */
-html,
-body {
-	background-color: #202020;
-}
 
 p>code {
-	margin: .5rem;
+	font-family: Consolas, 'Courier New', monospace;
+	color:#888;
 }
 
 ::selection {
-	background-color: #add8e688;
+	background-color: #add8e6;
 	color: #202020 !important;
 }
 
 ::-moz-selection {
-	background-color: #add8e688;
+	background-color: #add8e6;
 	color: #202020 !important;
 }
-
-
-
 
 .my-btn-1 {
 	position: fixed !important;
@@ -716,25 +717,39 @@ button.rounded-pill {
 	-webkit-user-select: none !important;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:500px) {
 	html {
-		font-size: 2vw;
+		font-size: 3vw;
 	}
-}
-
-.main img:not(.lg) {
-	margin-left: 20%
 }
 
 .text-third {
 	color: #888888 !important;
 }
 
-html {
-	display: none
+hr {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 
-hr {
+hr.big {
 	margin-top: 2rem;
 	margin-bottom: 2rem;
 }
+
+/* beta */
+
+/* * {
+	color:#f1f1f1!important;
+	background-color: #202020!important;
+} */
+
+.bg-mydark,.bg-dark{
+	color: #f1f1f1 !important;
+}
+
+/* .btn {
+	color: #f1f1f1 !important;
+	background-color: #202020 !important;
+	/* border-color: #202020 !important; */
+} */
