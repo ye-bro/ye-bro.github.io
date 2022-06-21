@@ -1,7 +1,5 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" x="IE=edge"><meta name="viewport" x="width=device-width, initial-scale=1.0"><link rel="shortcut icon" href="./favicon.png"><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css"><link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"><link rel="stylesheet" href="./style.css"><script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script><script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script><script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script><script src="https://cdn.staticfile.org/pangu/4.0.7/pangu.min.js"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script><script type="text/javascript"src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><title>叶bro's Blog</title></head><body class="bg-mydark"><div class="px-10 py-8 text-center">
-<h2>叶bro's blog</h2></div><div class="px-9 py-5 bg-mydark"><div class="main p-4 bg-mydark">
-    <div class="row">
-        <div class="col">
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" x="IE=edge"><meta name="viewport" x="width=device-width, initial-scale=1.0"><link rel="shortcut icon" href="./favicon.png"><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css"><link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"><link rel="stylesheet" href="./style.css"><script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script><script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script><script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script><script src="https://cdn.staticfile.org/pangu/4.0.7/pangu.min.js"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script><script type="text/javascript" src="http://cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><title>叶bro's Blog</title></head><body><div class="px-10 py-8 text-center">
+<h2>叶bro's blog</h2><p>Stoll'd bromen hem balgud</p></div><div class="px-9 py-5"><div class="main p-4"><div class="row"><div class="col">
 <div class="onePage">
     <!-- ---------- -->
     <h4><a href="./blog/2022/06/用micro编辑器仿照vscode配色主题.html" class="a-h">用micro编辑器仿照vscode配色主题</a></h4>
@@ -43,19 +41,24 @@
     <!-- ---------- -->
 </div>
 </div>
-<div class="col-md-3 rounded hidden-md bg-dark">
-    <div class="py-3 flightInfoBox">
+<div class="col-3 rounded hidden-md bg-light">
+    <div class="py-3" id="flightInfoBox">
         <h4>文章信息</h4>
         <p>文章数：<span id="cnt"></span></p>
         <h4>固定的文章</h4>
         <ol>
-            <li><a href="./about.html" class="a-h">关于</a></li>
-            <li><a href="./blog/2022/04/Hello,World.html" class="a-h">Hello,World!</a></li>
+            <li><a href="./about.html">关于</a></li>
+            <li><a href="./blog/2022/04/Hello,World.html">Hello,World!</a></li>
         </ol>
     </div>
 </div>
 </div>
-<div class="text-center"><p>第<span id="nowPage"></span>页 共<span id="allPage"></span>页</p></div><div class="text-center"><div class="btn-group"><button class="btn btn-dark" onclick="prev()"><i class="fa fa-angle-left"></i></button> <button class="btn btn-dark" onclick="info()">...</button> <button class="btn btn-dark" onclick="next()"><i class="fa fa-angle-right"></i></button></div></div></div></div></div><div class="my-btn-2"><button class="rounded-pill btn btn-dark" onclick="setTimeout(window.location.href='./index.html',500);"><i class="fa fa-home"></i></button></div><div class="my-btn-1"><button class="rounded-pill btn btn-dark" onclick="setTimeout(window.location.href='https://github.com/ye-bro',500);"><i class="fa fa-github"></i></button></div><div class="text-center bg-mydark text-light p-5">&copy;<span id="year"></span> 叶以承</div><script>
+<div class="text-center display-md"><p>第<span id="nowPageM"></span> 页 共<span id="allPageM"></span> 页</p></div><div class="text-center display-md"><div class="btn-group"><button class="btn btn-light" onclick="prev()"><i class="fa fa-angle-left"></i></button> <button class="btn btn-light" onclick="info()">...</button> <button class="btn btn-light" onclick="next()"><i class="fa fa-angle-right"></i></button></div></div>
+<hr class="display-md">
+<div class="rounded bg-light display-md p-3" id="downInfoBox">
+
+</div>
+<div class="text-center hidden-md"><p>第<span id="nowPage"></span>页 共<span id="allPage"></span>页</p></div><div class="text-center hidden-md"><div class="btn-group"><button class="btn btn-light" onclick="prev()"><i class="fa fa-angle-left"></i></button> <button class="btn btn-light" onclick="info()">...</button> <button class="btn btn-light" onclick="next()"><i class="fa fa-angle-right"></i></button></div></div></div></div></div><div class="my-btn-3"><button class="rounded-pill btn btn-light" onclick="darkmode()"><i class="fa fa-moon-o"></i></button></div><div class="my-btn-2"><button class="rounded-pill btn btn-light" onclick="setTimeout(window.location.href='./index.html',500);"><i class="fa fa-home"></i></button></div><div class="my-btn-1"><button class="rounded-pill btn btn-light" onclick="setTimeout(window.location.href='https://github.com/ye-bro',500);"><i class="fa fa-github"></i></button></div><div class="text-center p-5">&copy;<span id="year"></span> 叶以承</div><script>
 var n = 10;
 var a = document.getElementsByClassName("onePage");
 for (var i = 0; i < a.length; i++) {
@@ -112,21 +115,34 @@ if (get("page") == false) {
 $("#year").html(new Date().getFullYear());
 $("#cnt").html(a.length);
 pangu.spacingElementByClassName('main');
-var navH = $(".flightInfoBox").offset().top;
+var navH = $("#flightInfoBox").offset().top;
 console.log(navH);
 //滚动条事件
+function info(){
+    alert('第'+$('#nowPage').html()+' 页');
+}
+$("#downInfoBox").html($("#flightInfoBox").html());
+$("#nowPageM").html($("#nowPage").html());
+$("#allPageM").html($("#allPage").html());
 $(window).scroll(function(){
-    //获取滚动条的滑动距离
+    
     var scroH = $(this).scrollTop();
-    // console.log(scroH);
-    //滚动条的滑动距离大于等于定位元素距离浏览器顶部的距离，就固定，反之就不固定
+    
+    
     if(scroH>=navH){
-        $(".flightInfoBox").css({"top":"0","position":"fixed"});
+        $("#flightInfoBox").css({"top":"0","position":"fixed"});
     }else if(scroH<navH){
-        $(".flightInfoBox").css({"position":"static"});
+        $("#flightInfoBox").css({"position":"static"});
     }
-    });
-    function info(){
-        alert('第'+$('#nowPage').html()+' 页');
-    }
+});
+function darkmode() {
+    const wasDarkmode = localStorage.getItem('darkmode') === 'true';
+    localStorage.setItem('darkmode', !wasDarkmode);
+    const element = document.body;
+    element.classList.toggle('dark-mode', !wasDarkmode);
+}
+
+window.onload=function() {
+    document.body.classList.toggle('dark-mode', localStorage.getItem('darkmode') === 'true');
+}
 </script></body></html>

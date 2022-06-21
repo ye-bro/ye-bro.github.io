@@ -294,7 +294,7 @@ kbd {
 }
 
 .main a:not(.a-h):hover {
-	color: #000088;
+	color: #4a8ad4;
 }
 
 .a-inherit {
@@ -317,32 +317,22 @@ kbd {
 }
 
 pre {
-	font-family: Consolas, 'Courier New', monospace;
 	line-height: 1rem;
 	background-color: #1e1e1e;
 	color:#fff;
-	padding-left: 1rem;
-	padding-right: 1rem;
-	padding-bottom: 1rem;
-	border-radius:.2rem;
-	border: 1rem solid #343a40;
-}
-
-pre::before{
-	display:block;
-	content:"代码";
-	background-color:#343a40;
-	width:min-content;
-	padding:.3rem;
+	padding: .5rem;
+	border-radius: .2rem;
 }
 
 .main img {
 	margin-top: 2rem;
 	margin-bottom: 2rem;
-	width: 100%
+	width: min(30rem, 100%)!important;
+	margin-left: max(calc((100% - 30rem) / 2), 0px) !important;
+	border-radius: .2rem;
 }
 
-@media screen and (min-height:600px) {
+@media screen and (min-height:768px) {
 	.fh {
 		height: 100vh
 	}
@@ -638,7 +628,6 @@ p>a {
 /* 仅仅针对于这个网站 */
 
 p>code {
-	font-family: Consolas, 'Courier New', monospace;
 	color:#888;
 }
 
@@ -739,17 +728,18 @@ hr.big {
 
 /* beta */
 
-/* * {
-	color:#f1f1f1!important;
-	background-color: #202020!important;
-} */
-
-.bg-mydark,.bg-dark{
+.dark-mode{
 	color: #f1f1f1 !important;
+	/* color: #202020 !important; */
+	background-color: #202020 !important;
 }
 
-/* .btn {
+.dark-mode .bg-light{
 	color: #f1f1f1 !important;
-	background-color: #202020 !important;
-	/* border-color: #202020 !important; */
-} */
+	/* color: #202020 !important; */
+	background-color: #343a40 !important;
+}
+
+/* modes */
+
+.dark-mode .btn-light{color:#fff;background-color:#343a40;border-color:#343a40}.dark-mode .btn-light:hover{color:#fff;background-color:#23272b;border-color:#1d2124}.dark-mode .btn-light.focus,.dark-mode .btn-light:focus{box-shadow:0 0 0 .2rem rgba(82,88,93,.5)}.dark-mode .btn-light.disabled,.dark-mode .btn-light:disabled{color:#fff;background-color:#343a40;border-color:#343a40}.dark-mode .btn-light:not(:disabled):not(.disabled).active,.dark-mode .btn-light:not(:disabled):not(.disabled):active,.show>.dark-mode .btn-light.dropdown-toggle{color:#fff;background-color:#1d2124;border-color:#171a1d}.dark-mode .btn-light:not(:disabled):not(.disabled).active:focus,.dark-mode .btn-light:not(:disabled):not(.disabled):active:focus,.show>.dark-mode .btn-light.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(82,88,93,.5)}
