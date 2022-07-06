@@ -390,7 +390,7 @@ pre {
 	display: inherit !important
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:8px) {
 	.hidden-sm {
 		display: none !important
 	}
@@ -714,12 +714,6 @@ button.rounded-pill {
 	user-select: none !important;
 	-moz-user-select: none !important;
 	-webkit-user-select: none !important;
-}
-
-@media screen and (max-width:500px) {
-	html {
-		font-size: 3vw;
-	}
 }
 
 .text-third {
