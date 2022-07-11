@@ -1,5 +1,8 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" x="IE=edge"><meta name="viewport" x="width=device-width, initial-scale=1.0"><link rel="shortcut icon" href="./favicon.png"><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css"><link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"><link rel="stylesheet" href="./style.css"><script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script><script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script><script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script><script src="https://cdn.staticfile.org/pangu/4.0.7/pangu.min.js"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script><script type="text/javascript" src="http://cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><title>叶bro's Blog</title></head><body><div class="px-10 py-6 text-center">
-<h2>叶bro's blog</h2><p>Premature optimization is the root of all evil.</p></div><div class="px-9 py-5"><div class="main p-4"><div class="row"><div class="col">
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" x="IE=edge"><meta name="viewport" x="width=device-width, initial-scale=1.0"><link rel="shortcut icon" href="./favicon.png"><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css"><link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"><link rel="stylesheet" href="./style.css"><script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script><script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script><script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script><script src="https://cdn.staticfile.org/pangu/4.0.7/pangu.min.js"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script><script type="text/javascript" src="http://cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><title>叶bro's Blog</title></head><body><div class="container py-5"><div class="main p-4"><div class="row"><div class="col">
+    
+<h3 id="helloworld">叶bro's Blog</h3>
+<small class="text-third">Premature optimization is the root of all evil.</small><hr>
+    
 <div class="onePage">
     <!-- ---------- -->
     <h4><a href="./blog/2022/06/用micro编辑器仿照vscode配色主题.html" class="a-h">用micro编辑器仿照vscode配色主题</a></h4>
@@ -111,8 +114,7 @@ if (get("page") == false) {
 $("#year").html(new Date().getFullYear());
 $("#cnt").html(a.length);
 pangu.spacingElementByClassName('main');
-var navH = 326.3999938964844;
-// var navH = $("#flightInfoBox").offset().top;
+var navH = 72;
 //滚动条事件
 function info(){
     alert('第'+$('#nowPage').html()+' 页');
@@ -123,15 +125,6 @@ $("#nowPageM").html($("#nowPage").html());
 $("#allPageM").html($("#allPage").html());
 $(window).resize(function(){
     w = document.documentElement.clientWidth;
-    // var scroH = $(this).scrollTop();
-    // if(scroH>=navH&&w>992){
-    //     $("#flightInfoBox").css({"top":"0","position":"fixed"});
-    // }else if(scroH<navH){
-    //     $("#flightInfoBox").css({"position":"static"});
-    // }
-    // if(w<=992){
-    //     $("#flightInfoBox").css({"position":"static"});
-    // }
 });
 $(window).scroll(function(){
     var scroH = $(this).scrollTop();
